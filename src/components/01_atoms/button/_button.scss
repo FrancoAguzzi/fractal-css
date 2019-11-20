@@ -1,0 +1,98 @@
+.btn {
+  background-color: $color-black;
+  border-radius: 4px;
+  padding: 16px 47px;
+  border: 2px solid $color-black;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Arial";
+  font-size: 12px;
+  outline: none;
+
+  &:active,
+  &.active {
+    background-color: $color-blue;
+    border-color: $color-blue;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $color-gray;
+    border-color: $color-gray;
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $color-black;
+
+    &:active,
+    &.active {
+      background-color: #ff6a67;
+      color: $color-blue;
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: transparent;
+      color: $color-gray;
+    }
+  }
+
+  &--noline {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color-black;
+
+    &:active,
+    &.active {
+      background-color: #ff6a67;
+      border-color: #ff6a67;
+    }
+
+    &.disabled,
+    &:disabled {
+      border-color: transparent;
+      background-color: transparent;
+      color: $color-gray;
+    }
+  }
+
+  &--large {
+    padding: 18px 141px;
+
+    &:active,
+    &.active {
+      background-color: $color-blue;
+      border-color: $color-blue;
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: $color-gray;
+      border-color: $color-gray;
+    }
+  }
+
+  &--icon {
+    padding: 15px 154px;
+
+    & img {
+      .grayscale {
+        filter: grayscale(50%);
+      }
+    }
+
+    &:active,
+    &.active {
+      background-color: $color-blue;
+      border-color: $color-blue;
+    }
+
+    &:disabled,
+    &.disabled {
+      background-color: $color-gray;
+      border-color: $color-gray;
+    }
+  }
+}
