@@ -28,7 +28,7 @@
 
     &:active,
     &.active {
-      background-color: #ff6a67;
+      background-color: $color-salmon;
       color: $color-blue;
     }
 
@@ -46,8 +46,8 @@
 
     &:active,
     &.active {
-      background-color: #ff6a67;
-      border-color: #ff6a67;
+      background-color: $color-salmon;
+      border-color: $color-salmon;
     }
 
     &.disabled,

@@ -28,8 +28,8 @@
       opacity: 1;
     }
 
-    & + label:active,
-    &.active {
+    &:active + label,
+    &.active + label {
       border: 2px solid $color-pink;
     }
   }
@@ -60,8 +60,8 @@
       opacity: 0;
     }
 
-    & + label:active,
-    &.active {
+    &:active + label,
+    &.active + label {
       border: 2px solid $color-pink;
     }
 
@@ -82,7 +82,7 @@
       border-radius: 20px;
       transition: before 1s;
       cursor: pointer;
-      transition: .4s;
+      transition: 0.4s;
     }
 
     & + label:before {
@@ -94,7 +94,7 @@
       height: 30px;
       border-radius: 50%;
       background-color: $color-white;
-      transition: .4s;
+      transition: 0.4s;
     }
 
     & + label:after {
@@ -106,19 +106,18 @@
       font-size: 14px;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
-      transition: .4s;
+      transition: 0.4s;
     }
 
     &:checked {
-
       & + label {
         background-color: $color-black;
-        transition: .4s;
+        transition: 0.4s;
       }
-    
+
       & + label:before {
         transform: translateX(48px);
-        transition: .4s;
+        transition: 0.4s;
       }
 
       & + label:after {
@@ -126,7 +125,7 @@
         position: absolute;
         top: 12px;
         left: 18px;
-        transition: .4s;
+        transition: 0.4s;
       }
     }
   }
@@ -142,6 +141,7 @@
       background-color: $color-pink;
       border-radius: 4px;
       cursor: pointer;
+      transition: .4s;
     }
 
     & + label:before {
@@ -153,6 +153,7 @@
       width: 30px;
       height: 30px;
       border-radius: 4px;
+      transition: .4s;
     }
 
     & + label:after {
@@ -166,20 +167,20 @@
     }
 
     &:checked {
-
       & + label {
         background-color: $color-black;
-
+        transition: .4s;
       }
 
       & + label:before {
         transform: translateX(48px);
+        transition: .4s;
       }
 
       & + label:after {
         left: 18px;
         top: 11px;
-        background: url(/assets/yes-white.png)
+        background: url(/assets/yes-white.png);
       }
     }
   }

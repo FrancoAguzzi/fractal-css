@@ -1,0 +1,152 @@
+.nav {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $color-white;
+    border: 4px solid $color-salmon;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        width: 16px;
+        height: 16px;
+        background: url(/assets/arrow-right-black.png)
+    }
+
+    &:disabled {
+        background-color: #eaeaea;
+        border: 3px solid $color-gray;
+    }
+
+    &.active,
+    &:active {
+        background-color: #ff6a6778;
+        border: 4px solid #ff6a6778;
+    }
+
+    &--left-arrow {
+
+        &:before {
+            background: url(/assets/arrow-left-black.png)
+        }
+    }
+
+    &--left-chevron {
+
+        &:before {
+            background: url(/assets/chevron-left.png);
+            width: 7px;
+            height: 10px;
+            top: 16px;
+            left: 17.5px;
+        }
+    }
+
+    &--right-chevron {
+
+        &:before {
+            background: url(/assets/chevron-right.png);
+            width: 7px;
+            height: 10px;
+            top: 16px;
+            left: 17.5px;
+        }
+    }
+
+    &--black-menu {
+
+        &.div-menu {
+            width: 154px;
+            height: 50px;
+            border: 0;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            cursor: pointer;
+        }
+
+        &.menu1, &.menu2, &.menu3 {
+            width: 33%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            background-color: $color-black;
+            border-radius: 0;
+        }
+
+        &.menu1 {
+            border-radius: 4px 0 0 4px;
+            border-right: 3px solid rgba(255, 255, 255, .1);
+        }
+
+        &.menu2 {
+            border-right: 3px solid rgba(255, 255, 255, .1)
+        }
+
+        &.menu3 {
+            border-radius: 0 4px 4px 0;
+        }
+        
+        &.menu1 {
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: 16.5px;
+                align-self: center;
+                width: 16px;
+                height: 16px;
+                background: url(/assets/search-white.png);
+            }
+
+            &:active,
+            &.active {
+                background-color: $color-gray;
+            }
+        }
+
+        &.menu2 {
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: 17px;
+                width: 16px;
+                height: 16px;
+                background: url(/assets/web-white.png);
+            }
+            
+            &:active,
+            &.active {
+                background-color: $color-gray;
+            }
+        }
+
+        &.menu3 {
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 17px;
+                left: 17px;
+                width: 16px;
+                height: 16px;
+                background: url(/assets/profile-white.png);
+            }
+
+            &:active,
+            &.active {
+                background-color: $color-gray;
+            }
+        }
+    }
+}

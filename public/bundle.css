@@ -207,7 +207,8 @@ table {
     opacity: 0; }
   .input--checkbox:checked + label:before {
     opacity: 1; }
-  .input--checkbox + label:active, .input--checkbox.active {
+  .input--checkbox:active + label,
+  .input--checkbox.active + label {
     border: 2px solid #ff004d; }
 
 .input--radio {
@@ -231,7 +232,8 @@ table {
     border-radius: 50%;
     background-color: #000;
     opacity: 0; }
-  .input--radio + label:active, .input--radio.active {
+  .input--radio:active + label,
+  .input--radio.active + label {
     border: 2px solid #ff004d; }
   .input--radio:checked + label:before {
     opacity: 1; }
@@ -247,7 +249,7 @@ table {
     border-radius: 20px;
     transition: before 1s;
     cursor: pointer;
-    transition: .4s; }
+    transition: 0.4s; }
   .input--round-toggle + label:before {
     content: "";
     top: 5px;
@@ -257,7 +259,7 @@ table {
     height: 30px;
     border-radius: 50%;
     background-color: #fff;
-    transition: .4s; }
+    transition: 0.4s; }
   .input--round-toggle + label:after {
     content: "OFF";
     position: absolute;
@@ -267,19 +269,19 @@ table {
     font-size: 14px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    transition: .4s; }
+    transition: 0.4s; }
   .input--round-toggle:checked + label {
     background-color: #000;
-    transition: .4s; }
+    transition: 0.4s; }
   .input--round-toggle:checked + label:before {
     transform: translateX(48px);
-    transition: .4s; }
+    transition: 0.4s; }
   .input--round-toggle:checked + label:after {
     content: "ON";
     position: absolute;
     top: 12px;
     left: 18px;
-    transition: .4s; }
+    transition: 0.4s; }
 
 .input--squared-toggle {
   display: none; }
@@ -290,7 +292,8 @@ table {
     height: 40px;
     background-color: #ff004d;
     border-radius: 4px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: .4s; }
   .input--squared-toggle + label:before {
     content: "";
     position: absolute;
@@ -299,7 +302,8 @@ table {
     background-color: #fff;
     width: 30px;
     height: 30px;
-    border-radius: 4px; }
+    border-radius: 4px;
+    transition: .4s; }
   .input--squared-toggle + label:after {
     content: "";
     position: absolute;
@@ -309,10 +313,146 @@ table {
     height: 16px;
     background: url(/assets/cancel-black.png); }
   .input--squared-toggle:checked + label {
-    background-color: #000; }
+    background-color: #000;
+    transition: .4s; }
   .input--squared-toggle:checked + label:before {
-    transform: translateX(48px); }
+    transform: translateX(48px);
+    transition: .4s; }
   .input--squared-toggle:checked + label:after {
     left: 18px;
     top: 11px;
     background: url(/assets/yes-white.png); }
+
+.nav {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 4px solid #ff6a67;
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer; }
+  .nav:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 16px;
+    height: 16px;
+    background: url(/assets/arrow-right-black.png); }
+  .nav:disabled {
+    background-color: #eaeaea;
+    border: 3px solid #aaaaaa; }
+  .nav.active, .nav:active {
+    background-color: #ff6a6778;
+    border: 4px solid #ff6a6778; }
+  .nav--left-arrow:before {
+    background: url(/assets/arrow-left-black.png); }
+  .nav--left-chevron:before {
+    background: url(/assets/chevron-left.png);
+    width: 7px;
+    height: 10px;
+    top: 16px;
+    left: 17.5px; }
+  .nav--right-chevron:before {
+    background: url(/assets/chevron-right.png);
+    width: 7px;
+    height: 10px;
+    top: 16px;
+    left: 17.5px; }
+  .nav--black-menu.div-menu {
+    width: 154px;
+    height: 50px;
+    border: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer; }
+  .nav--black-menu.menu1, .nav--black-menu.menu2, .nav--black-menu.menu3 {
+    width: 33%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    background-color: #000;
+    border-radius: 0; }
+  .nav--black-menu.menu1 {
+    border-radius: 4px 0 0 4px;
+    border-right: 3px solid rgba(255, 255, 255, 0.1); }
+  .nav--black-menu.menu2 {
+    border-right: 3px solid rgba(255, 255, 255, 0.1); }
+  .nav--black-menu.menu3 {
+    border-radius: 0 4px 4px 0; }
+  .nav--black-menu.menu1:before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 16.5px;
+    align-self: center;
+    width: 16px;
+    height: 16px;
+    background: url(/assets/search-white.png); }
+  .nav--black-menu.menu1:active, .nav--black-menu.menu1.active {
+    background-color: #aaaaaa; }
+  .nav--black-menu.menu2:before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 16px;
+    height: 16px;
+    background: url(/assets/web-white.png); }
+  .nav--black-menu.menu2:active, .nav--black-menu.menu2.active {
+    background-color: #aaaaaa; }
+  .nav--black-menu.menu3:before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 16px;
+    height: 16px;
+    background: url(/assets/profile-white.png); }
+  .nav--black-menu.menu3:active, .nav--black-menu.menu3.active {
+    background-color: #aaaaaa; }
+
+.content {
+  position: relative;
+  display: block;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none; }
+  .content:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: url(/assets/add.png); }
+  .content:active, .content.active {
+    background-color: rgba(207, 17, 17, 0.849); }
+  .content--ecs {
+    background-color: #ff6a67; }
+    .content--ecs:before {
+      background: url(/assets/cancel-black.png); }
+    .content--ecs.active, .content--ecs:active {
+      background-color: rgba(207, 17, 17, 0.849); }
+  .content--check:before {
+    background: url(/assets/yes-white.png); }
+  .content--play {
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    width: 70px;
+    height: 70px; }
+    .content--play:before {
+      background: url(/assets/alert.png);
+      left: 25px;
+      top: 25px; }
+    .content--play:active, .content--play.active {
+      border-color: #aaaaaa;
+      background-color: #eaeaea; }

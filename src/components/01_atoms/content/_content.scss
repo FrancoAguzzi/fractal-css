@@ -1,0 +1,65 @@
+.content {
+    position: relative;
+    display: block;
+    background-color: $color-black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 16px;
+        height: 16px;
+        background: url(/assets/add.png);
+    }
+
+    &:active,
+    &.active {
+        background-color: rgba(207, 17, 17, 0.849);
+    }
+
+    &--ecs {
+        background-color: $color-salmon;
+
+        &:before {
+            background: url(/assets/cancel-black.png);
+        }
+
+        &.active,
+        &:active {
+            background-color: rgba(207, 17, 17, 0.849);
+        }
+    }
+
+    &--check {
+
+        &:before {
+            background: url(/assets/yes-white.png);
+        }
+    }
+
+    &--play {
+        background-color: transparent;
+        box-sizing: border-box;
+        border: 2px solid $color-white;
+        width: 70px;
+        height: 70px;
+        
+        &:before {
+            background: url(/assets/alert.png);
+            left: 25px;
+            top: 25px;
+        }
+
+        &:active,
+        &.active {
+            border-color: $color-gray;
+            background-color: #eaeaea;
+        }
+    }
+}
